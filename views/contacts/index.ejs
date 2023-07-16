@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-3">
+    <h2>All Contacts</h2>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Telephone</th>
+                <th>D.O.B</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% contacts.forEach(function(c){ %>
+                <tr>
+                    <td><%= c.name %></td>
+                    <td><%= c.email %></td>
+                    <td><%= c.phone %></td>
+                    <td><%= c.dob ? c.dob.toLocaleDateString() : 'Not specified'%></td>
+                </tr>
+           <% })%>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+
+<%- include('../partials/footer') %>
