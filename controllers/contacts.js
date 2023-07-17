@@ -5,6 +5,7 @@ module.exports = {
     new : newContact,
     create,
     index,
+    show,
 }
 
 function newContact(req,res) {
@@ -20,8 +21,15 @@ async function create(req,res) {
     }
 }
 
+
+
 async function index(req,res) {
     const contacts = await Contact.find({})
-    res.render('contacts/index', {title: 'All Contacts', contacts })
+    res.render('contacts/index', {title: 'All Contacts', contacts });
+    
 }
 
+async function show(req,res) {
+    const contacts = await Contact.findById(req.params.id);
+    res.render('contacts/show', { contact: contacts })
+  }

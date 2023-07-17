@@ -1,0 +1,15 @@
+<%- include('../partials/header') %>
+<br>
+<h2>Contacts Details</h2>
+
+<div>Name: <%= contact.name %></div>
+
+<div>Email: <%= contact.email %></div>
+
+<div>Telephone: <%= contact.phone %></div>
+
+<div>Date of Birth: <%= contact.dob ? contact.dob.toLocaleDateString() : 'Not specified' %></div>
+
+
+
+<%- include('../partials/footer') %>

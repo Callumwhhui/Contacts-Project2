@@ -10,6 +10,7 @@
                 <th>Email</th>
                 <th>Telephone</th>
                 <th>D.O.B</th>
+                <th>More</th>
             </tr>
         </thead>
         <tbody>
@@ -19,6 +20,7 @@
                     <td><%= c.email %></td>
                     <td><%= c.phone %></td>
                     <td><%= c.dob ? c.dob.toLocaleDateString() : 'Not specified'%></td>
+                    <td><a class="btn btn-primary" href="/contacts/<%= c._id %>">Details</a></td>
                 </tr>
            <% })%>
         </tbody>
