@@ -10,6 +10,10 @@ const contactSchema = new Schema({
     email: String,
     phone: Number,
     dob: Date,
+    owner: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    }
 }, {
     timestamps: true
 })
