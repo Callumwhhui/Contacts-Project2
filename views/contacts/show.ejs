@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <br>
+<div class="container mt-3">
 <h2>Contacts Details</h2>
-
 <div>Name: <%= contact.name %></div>
 
 <div>Email: <%= contact.email %></div>
@@ -9,7 +9,38 @@
 <div>Telephone: <%= contact.phone %></div>
 
 <div>Date of Birth: <%= contact.dob ? contact.dob.toLocaleDateString() : 'Not specified' %></div>
-
+<br> <h5>Work:</h5>
+<% if (contact.work) {%>
+    
+            <% contact.work.forEach(function(c) {%> 
+                
+                   <div>Company Name: <%= c.company %> </div> 
+                    <div>Industry: <%= c.industry %> </div>
+                
+                <% }) %>
+        
+ <% } else {%> 
+    <h5>No company added</h5>
+    <% }%>
+</div>
+<br><br>
+<div class="container mt-3">
+    <h2>Add a New Company</h2>
+    <form action="/contacts/<%= contact._id %>/companies" method="POST">
+        <div class="mb-3 mt-3">
+            <label class="form-label">Name:
+                <input type="text" name="company" placeholder="Enter Company" class="form-control">
+            </label>
+        </div>
+        <div class="mb-3 ">
+            <label class="form-label">Industry:
+                <input type="text" name="industry" placeholder="Enter Industry" class="form-control">
+            </label>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">ADD</button>
+    </div>
+    </form>
 
 
 <%- include('../partials/footer') %>

@@ -3,13 +3,14 @@ var router = express.Router();
 
 // create controller module 
 const contactsCtrl = require('../controllers/contacts')
+const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 // get route for /contacts/new
-router.get('/new', contactsCtrl.new);
+router.get('/new',ensureLoggedIn, contactsCtrl.new);
 
-router.post('/', contactsCtrl.create)
+router.post('/',ensureLoggedIn, contactsCtrl.create)
 
-router.get('/', contactsCtrl.index);
+router.get('/',ensureLoggedIn, contactsCtrl.index);
 
 router.get('/:id', contactsCtrl.show);
 
