@@ -11,6 +11,7 @@
                 <th>Telephone</th>
                 <th>D.O.B</th>
                 <th>More</th>
+                <th><a class="btn btn-outline-success" href="/contacts/new">+</a></th>
             </tr>
         </thead>
         <tbody>
@@ -20,7 +21,12 @@
                     <td><%= c.email %></td>
                     <td><%= c.phone %></td>
                     <td><%= c.dob ? c.dob.toLocaleDateString() : 'Not specified'%></td>
-                    <td><a class="btn btn-primary" href="/contacts/<%= c._id %>">Details</a></td>
+                    <td><a class="btn btn-outline-primary" href="/contacts/<%= c._id %>">Details</a></td>
+                    <td>
+                      <form action="/contacts/<%= c.id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-outline-danger" type="submit">X</button>
+                      </form>
+                    </td>
                 </tr>
            <% })%>
         </tbody>

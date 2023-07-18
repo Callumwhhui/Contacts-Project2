@@ -6,7 +6,16 @@ module.exports = {
     create,
     index,
     show,
+    delete: deleteContact,
 }
+
+
+
+async function deleteContact (req,res) {
+    const result1 = await Contact.deleteOne({_id : req.params.id})
+    res.redirect('/contacts')
+}
+
 
 function newContact(req,res) {
     res.render('contacts/new', {errorMsg: ''})
