@@ -16,4 +16,8 @@ router.delete('/:id', contactsCtrl.delete);
 
 router.get('/:id', contactsCtrl.show);
 
+router.get('/:id/edit',ensureLoggedIn, contactsCtrl.edit);
+
+router.put('/:id',ensureLoggedIn, contactsCtrl.update)
+
 module.exports = router;

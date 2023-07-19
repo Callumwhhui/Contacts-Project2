@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+<div class="container mt-3">
+<h2>Edit Contact</h2>
+<form action="/contacts/<%= contact._id %>?_method=PUT" method="POST">
+    <div class="mb-3 mt-3">
+        <label class="form-label">Name:
+            <input type="text" name="name" placeholder="<%= contact.name %>" class="form-control">
+        </label>
+    </div>
+    <div class="mb-3 ">
+        <label class="form-label">Email:
+            <input type="email" name="email" placeholder="Enter Email" class="form-control">
+        </label>
+    </div>
+    <div class="mb-3 ">
+        <label class="form-label">Telephone:
+            <input type="number" name="phone" placeholder="Enter Telephone " class="form-control">
+        </label>
+    </div>
+    <div class="mb-3 ">
+        <label class="form-label">Date of Birth:
+            <input type="datetime-local" name="dob" placeholder="Enter D.O.B " class="form-control">
+        </label>
+    </div>
+    <button type="submit" class="btn btn-primary">SAVE</button>
+</div>
+</form>
+
+<%- include('../partials/footer') %>

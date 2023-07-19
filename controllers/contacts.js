@@ -7,9 +7,21 @@ module.exports = {
     index,
     show,
     delete: deleteContact,
+    edit,
+    update,
 }
 
+async function update (req,res) {
+   await Contact.updateOne( {_id: req.params.id}, req.body);
+    
+    res.redirect(`/contacts/${req.params.id}`)
+}
 
+async function edit (req,res) {
+    const contact = await Contact.findById(req.params.id)
+    console.log(contact)
+    res.render('contacts/edit', {title: 'Edit Contact', contact});
+}
 
 async function deleteContact (req,res) {
     const result1 = await Contact.deleteOne({_id : req.params.id})
