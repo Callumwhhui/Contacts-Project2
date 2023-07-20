@@ -20,7 +20,9 @@ img {
   background: #aaa;
 }
 
-
+footer{
+  margin-top: auto;
+}
 .github {
   height: 30px;
   margin: 10px;
