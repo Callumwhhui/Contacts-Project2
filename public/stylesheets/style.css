@@ -1,6 +1,6 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  
+  font-family: 'Ysabeau Infant', sans-serif;
+  background-color: #6e7376;
 }
 
 a {
@@ -9,5 +9,16 @@ a {
 
 
 #contact-table {
-  border: solid 1px red;
+  padding: 10px;
+  border-radius: 10px;
+
 }
+
+
+img {
+  height: 200px;
+  background: #aaa;
+}
+
+
+

@@ -1,6 +1,8 @@
 <%- include('../partials/header') %>
 <br>
-<div class="container mt-3">
+<div class="container mt-3 p-3 bg-dark text-white rounded">
+    <a href="/contacts" class="btn btn-secondary">⬅ </a>
+    <br><br>
 <h2>Contacts Details</h2>
 <div>Name: <%= contact.name %></div>
 
@@ -24,7 +26,8 @@
     <% }%>
 </div>
 <br><br>
-<div class="container mt-3">
+<% if (contact.work.length === 0 ) {%>
+<div class="container mt-3 p-3 bg-dark text-white rounded">
     <h2>Add a New Company</h2>
     <form action="/contacts/<%= contact._id %>/companies" method="POST">
         <div class="mb-3 mt-3">
@@ -38,9 +41,14 @@
             </label>
         </div>
         
-        <button type="submit" class="btn btn-primary">ADD</button>
+        <button type="submit" class="btn btn-outline-primary">ADD</button>
     </div>
-    </form>
+</form>
+<%} else {%>
+    <div class="container mt-3 p-3 bg-dark text-white rounded">
+    <h2>Work Already Added</h2>
+    </div>
+    <% } %>
 
 
 <%- include('../partials/footer') %>

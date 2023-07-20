@@ -1,5 +1,69 @@
 <%- include('./partials/header') %>
 
-<h1>Welcome to the contacts!!!! YAY</h1>
+<div class="container mt-5">
+    <div class="row">
+        <section class="user-auth-section">
+            <div class="container">
+              <h2 class="section-title">Welcome to Contactify </h2>
+              <h5 class="section-description">Manage your contacts with ease and access them securely from any device!</h5>
+              <div class="auth-buttons">
+                <% if (!user) { %>
+                <a href="/auth/google" class="btn btn-secondary">Sign Up</a>
+                <span>or</span>
+                <a href="/auth/google" class="btn btn-secondary">Log In</a>
+                <% } else { %>
+                <a href="/contacts" class="btn btn-secondary">Go to Contacts</a>
+                <% } %>
+              </div>
+            </div>
+          </section>
+      <div class="col-sm-8">
+        <h2>Contactify</h2>
+        <h5>Your people, contacts and connections </h5>
+        <br>
+        <div class="fakeimg"><img src="https://fscl01.fonpit.de/userfiles/6727621/image/2016/HeroS-random/AndroidPIT-htc-10-contacts-w1400h1050.jpg" alt="bg-img"></div>
+        <br>
+        <p>Discover the power of our contact management app, designed to simplify your life and keep your contacts at your fingertips. Whether you need to manage personal or professional contacts, we've got you covered.</p>
+  
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+            
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="https://i.imgur.com/p6u9p2e.png" alt="All Contacts" class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.imgur.com/pUfZCqa.png" alt="edit-contacts" class="d-block" style="width:100%">
+              </div>
+              <div class="carousel-item">
+                <img src="https://i.imgur.com/IGOYDpi.png" alt="work-contacts" class="d-block" style="width:100%">
+              </div>
+            </div>
+            
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </button>
+          </div>
+          
+          <div class="container-fluid mt-3">
+            <h3>App Screenshots</h3>
+            <p>Our app boasts a simple and intuitive interface, making it effortless to navigate through various features and functionalities. </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+ 
 
 <%- include('./partials/footer') %>
