@@ -21,4 +21,15 @@ img {
 }
 
 
+.github {
+  height: 30px;
+  margin: 10px;
+  background-color: rgba(34, 34, 34, 0.677);
+}
 
+.linkedin {
+  height: 30px;
+  margin: 10px;
+  background-color: rgba(34, 34, 34, 0.677);
+
+}
