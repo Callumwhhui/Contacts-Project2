@@ -40,7 +40,7 @@ Welcome to Contactify! This web application allows users to efficiently manage t
 ## Usage 
 
 Follow this link to open the app:
-https://contactify-d5f7e8dc4b38.herokuapp.com/
+<a href="https://contactify-d5f7e8dc4b38.herokuapp.com/">Link! </a>
 
 ## The Brief 
 
